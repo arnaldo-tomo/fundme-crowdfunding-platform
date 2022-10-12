@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Guide upgrade to Laravel 6</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+
+      <div class="header-title">
+        <p class="lead">Update v3.4</p>
+        <h1>Guide upgrade to Laravel 6</h1>
+        <p class="lead">Fundme Crowdfunding Platform</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Step by Step</h2>
+
+          <div class="alert alert-info" role="alert">
+  If you are downloading for the first time you should not perform these steps.
+</div>
+
+<ul class="list-cgl">
+  <li class="title-list">Requirements:</li>
+<li>PHP &gt;= 7.2.0</li>
+<li>MySQL 5.6</li>
+<li>BCMath PHP Extension</li>
+<li>OpenSSL PHP Extension</li>
+<li>PDO PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+<li>XML PHP Extension</li>
+<li>Ctype PHP Extension</li>
+<li>JSON PHP Extension</li>
+<li>cURL</li>
+<li>Fileinfo PHP Extension</li>
+</ul>
+
+          <ul class="list-cgl">
+            <li class="title-list">First steps</li>
+
+						<li>Upload the <code>ZIP</code> file to your server</li>
+						<li>Create a folder on your server for example called <code>_NEW</code>, and unzip the <code>ZIP</code> file inside</li>
+            <img class="img-fluid" src="assets/images/upgrade/01.jpg">
+						<li>Do not delete the files that you will copy below because you will lose all the changes you have made.</li>
+            <li>Once the folder is created and the <code>ZIP</code> file is decompressed, we will proceed with the upgrade.</li>
+            <li>You should only copy the files from your current site to the folders mentioned below.</li>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <div class="alert alert-warning" role="alert">
+        <strong>IMPORTANT:</strong>  If you have any questions to update or do not know how to do it, contact me before you start, once you have made the changes it can not be reversed. You must copy the files from your current site to the folder you created with the new version.
+          </div>
+
+          <ul class="list-cgl affected-files">
+
+          <li class="title-list"><code><i class="fas fa-folder-open"></i> Root directory</code></li>
+
+          <li>.env</li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> <em>app</em></code></li>
+
+              <ul>
+                <li>Copy the <code>Models</code> folder of your current site</li>
+                <img class="img-fluid mb-2" src="assets/images/upgrade/02.jpg">
+                <img class="img-fluid" src="assets/images/upgrade/03.jpg">
+                <li>Copy the <code>app/Http/Controllers</code> folder of your current site</li>
+                <img class="img-fluid" src="assets/images/upgrade/04.jpg">
+              </ul>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> <em>config</em></code></li>
+              <ul>
+
+                <li>Copy all the files in the <code>config</code> folder except the <code>app.php</code> file, of your current site</li>
+                <img class="img-fluid" src="assets/images/upgrade/05.jpg">
+              </ul>
+              <div class="alert alert-warning mt-2" role="alert">Set your time zone again: <strong>'timezone' =&gt; 'America/Caracas',</strong> in <strong>app.php</strong> file</div>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> <em>public</em></code></li>
+              <ul>
+                <li>Copy all the folders from your current site</li>
+                <img class="img-fluid" src="assets/images/upgrade/06.jpg">
+                <small class="form-text text-muted">
+                <strong>Important:</strong> only replace the folders, not copy the files (ie: .htaccess, server.php, etc).
+                </small>
+              </ul>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> <em>resources</em></code></li>
+              <ul>
+                <li>Copy the folder <code>resources/lang</code> of your current site</li>
+                <li>Copy the folder <code>resources/views</code> of your current site</li>
+                <img class="img-fluid" src="assets/images/upgrade/07.jpg">
+              </ul>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> <em>routes</em></code></li>
+              <ul>
+                <li>Copy the file <code>routes/web.php</code> of your current site</li>
+              </ul>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <p>
+            Once all the folders and files have been copied, create a new folder called <code class="font-weight-bold">_backup</code> there will move all the files of your current site as backup, after you move all the files, move all the files of the new folder where I copy the aforementioned files .
+            There should not be any problem.
+          </p>
+          <img class="img-fluid mb-2" src="assets/images/upgrade/08.jpg">
+          <img class="img-fluid mb-4" src="assets/images/upgrade/09.jpg">
+
+          <div class="alert alert-warning mb-4" role="alert">
+        <strong>IMPORTANT:</strong> After copying all files, change the password of the database user.
+          </div>
+
+          <div class="alert alert-warning mb-5" role="alert">
+        <strong>IMPORTANT:</strong> If after updating you have a <strong>500 error</strong>, make sure you have <strong>PHP 7.2 or higher</strong>, or if you have this error: <strong>The server requested authentication method unknown to the client...</strong> just change the password of the database user.
+        My recommendation is to change the password of the database user to avoid problems.
+          </div>
+
+          <hr />
+
+          <div class="card-deck">
+
+            <div class="card" style="width: 18rem;">
+              <a href="https://miguelvasquez.net/product/8/sponzy-support-creators-content-script?utm_source=updategostockv29&utm_medium=v21" target="_blank">
+              <img class="card-img-top" src="assets/images/sponzy-support-creators-content-script.png">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Sponzy - Support Creators Content Script</h5>
+                <a href="https://miguelvasquez.net/product/8/sponzy-support-creators-content-script?utm_source=updategostockv29&utm_medium=v21" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+            <a href="https://miguelvasquez.net/product/12/mollie-payment-for-fundme" target="_blank">
+              <img class="card-img-top" src="assets/images/mollie-fundme.png">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Mollie Payment for Fundme</h5>
+                <a href="https://miguelvasquez.net/product/12/mollie-payment-for-fundme" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <a href="https://miguelvasquez.net/product/10/razorpay-payment-for-fundme" target="_blank">
+              <img class="card-img-top" src="assets/images/razorpay-fundme.png">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Razorpay Payment for Fundme</h5>
+                <a href="https://miguelvasquez.net/product/10/razorpay-payment-for-fundme" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+        </div><!-- card group -->
+
+        <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/?utm_source=updategostockv29&utm_medium=v29" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Update Fundme Crowdfunding Platform v2.6</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg text-center">
+        <div class="container">
+          <div class="position-relative">
+            <h1 class="jumbotron-title">Fundme Crowdfunding Platform v2.6</h1>
+              <p class="lead">Updated:  20, December 2018</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Changelog</h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">Fixed</li>
+
+						<li>CSS Margin - Banner confirm email</li>
+            <li>Current year in emails template</li>
+            <li>Share Facebook - Image not showing</li>
+
+            <li class="title-list">Added</li>
+
+            <li>Text <strong><em>Create Campaing</em></strong> in button menu (Missing)</li>
+						<li>Implemented GDPR</li>
+						<li>User can not change avatar until his account is confirmed</li>
+
+            <li>Add Date Format in Panel Admin</li>
+            <li>Add Currency Position in Panel Admin</li>
+            <li>Add Featured Campaigns section in Index</li>
+            <li>Add Featured Campaigns page</li>
+
+            <li class="title-list">Removed</li>
+            <li>Finished campaigns of the Index</li>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <div class="alert alert-danger" role="alert">
+        <i class="fas fa-exclamation-triangle"></i> <strong>IMPORTANT:</strong>
+        Login with account the admin and go this URL <strong>http://YOUSITE.com/update/2.6</strong> It is important because it adds to the database fields needed for this version.
+
+        <strong>NOTE:</strong> Enter the URL mentioned above after climbing the:<br>
+
+          <strong>/ app / Http / Controllers / UpgradeController.php</strong>
+          </div>
+
+          <h2 class="title2">Affected files</h2>
+
+          <ul class="list-cgl affected-files">
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> app</code></li>
+            <li>Helper.php <code>Line:6,345</code></li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Http / Controllers / Auth</code></li>
+
+						<li>RegisterController.php <code>Line:61</code></li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Http / Controllers</code></li>
+
+            <li>AdminController.php <code>Line:168,169,182,183,184,185,514,524,525</code></li>
+            <li>AjaxController.php <code>Line:123</code></li>
+            <li>CampaignsController.php <code>Line:42,53,54</code></li>
+            <li>DonationsController.php <code>Line:102,109,110</code></li>
+            <li>HomeController.php <code>Line:28 to 62,161</code></li>
+            <li>RewardsController.php <code>Line:31,38,39</code></li>
+            <li>UpgradeController.php</li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Models</code></li>
+            <li>Categories.php</li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> resources / lang / en</code></li>
+            <li>admin.php <code>Line:151</code></li>
+            <li>misc.php <code>Line:350</code></li>
+            <li>validation.php <code>Line:118</code></li>
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> resources / views</code></li>
+
+            <ul>
+              <li class="title-list"><code><em>admin</em></code></li>
+              <li>campaigns.blade.php <code>Line:74,75,85</code></li>
+              <li>reported-campaigns.blade.php <code>Line:44</code></li>
+              <li>dashboard.blade.php <code>Line:56,127,181</code></li>
+              <li>withdrawals.blade.php <code>Line:57,66</code></li>
+              <li>withdrawals-view.blade.php <code>Line:49,60</code></li>
+              <li>donations.blade.php <code>Line:49,52</code></li>
+              <li>donations-view.blade.php <code>Line:45,98</code></li>
+              <li>members.blade.php <code>Line:90</code></li>
+              <li>edit-member.blade.php <code>Line:105</code></li>
+              <li>settings.blade.php <code>Line:124,134</code></li>
+            </ul>
+
+            <ul>
+              <li class="title-list"><code><em>auth</em></code></li>
+              <li>register.blade.php <code>Line:8,94,124,180</code></li>
+            </ul>
+
+              <ul>
+                <li class="title-list"><code><em>campaigns</em></code></li>
+    						<li>view.blade.php <code>Line:62,63,64,322,415,416,493</code></li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>default</em></code></li>
+                <li>donate.blade.php <code>Line:63,232,251,252,288</code></li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>emails</em></code></li>
+                <li>thanks-donor.blade.php</li>
+                <li>verify.blade.php</li>
+                <li>withdrawal-processed.blade.php</li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>includes</em></code></li>
+                <li>embed.blade.php <code>Line:89,101</code></li>
+                <li>list-campaigns.blade.php <code>Line:92,104</code></li>
+                <li>listing-donations.blade.php <code>Line:21</code></li>
+                <li>navbar.blade.php <code>Line:9,39,127</code></li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>index</em></code></li>
+                <li>campaigns-featured.blade.php <span class="badge badge-danger">NEW</span></li>
+                <li>home.blade.php <code>Line:42 to 64</code></li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>users</em></code></li>
+                <li>account.blade.php <code>Line:41</code></li>
+                <li>campaigns.blade.php <code>Line:113,114,124,127</code></li>
+                <li>dashboard.blade.php <code>Line:71,151,154,220</code></li>
+                <li>donations.blade.php <code>Line:60,62</code></li>
+                <li>donation-view.blade.php <code>Line:45,76</code></li>
+                <li>withdrawals.blade.php <code>Line:63,72</code></li>
+              </ul>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> routes</code></li>
+              <li>web.php <code>Line:385,386</code></li>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <div class="card-deck">
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/images/shotbly.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Shotbly Community Script</h5>
+              <a href="https://miguelvasquez.net/product/6/shotbly-community-script" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/images/spanish-language-for-gostock.png">
+            <div class="card-body">
+              <h5 class="card-title">Spanish Language For GoStock – Free Stock Photos Script</h5>
+              <a href="https://miguelvasquez.net/product/7/spanish-language-for-gostock-free-stock-photos-script" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/images/gostock.jpg">
+            <div class="card-body">
+              <h5 class="card-title">GoStock – Free Stock Photos Script</h5>
+              <a href="https://codecanyon.net/item/gostock-free-stock-photos-script/19407325" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+            </div>
+          </div>
+
+        </div><!-- card group -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+          <hr />
+
+          <div class="text-center">
+            <a href="https://www.paypal.me/MiguelVasquezSoto" target="_blank" class="btn btn-light btnPaypal"><img src="assets/images/paypal.png" width="16" height="16" /></i> Donate</a>
+            <small class="form-text text-muted">Any donation will be well received 😉</small>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

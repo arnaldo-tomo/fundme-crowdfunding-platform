@@ -1,0 +1,41 @@
+*********************************************************
+*                  Update v1.5                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Multilanguage Error url
+- Change url in google fonts http or https
+- Fixed bug with withdrawal amount
+
+*** NEWS ****
+- Truncate text in the story of the campaign
+- Add Captcha (managed from the admin panel)
+
+***** Files Affected *****
+
+/ resources / views / app.blade.php
+
+/ resources / views / includes / css_general.blade.php
+
+
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / CampaignsController.php
+/ app / Http /controllers / DonationsController.php
+
+
+/ resources / views / admin / withdrawals.blade.php
+/ resources / views / admin / withdrawal-view.blade.php
+/ resources / views / admin / settings.blade.php
+
+
+/ resources / views / campaigns / view.blade.php
+
+
+/ resources / views / users / withdrawals.blade.php
+
+/ public / css / main.css // From approximately line 2997
+/ public / js / functions.js
+
+
+
+Thanks!

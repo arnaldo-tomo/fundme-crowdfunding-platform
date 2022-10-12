@@ -1,0 +1,50 @@
+*********************************************************
+*                  Update v2.1                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Campaigns finalized
+
+*** NEWS ****
+- Dashboard for users with stats
+- Copy link button in Camapigns
+- Percentage real Goal
+
+******************************************************
+***                   Files Affected              ****
+******************************************************
+
+/ routes / web.php
+
+******* Controllers **********
+/ app / Http /controllers / CampaingsController.php
+/ app / Http /controllers / DonationsController.php
+
+
+******* Views ************
+/ resources / views / campaigns / view.blade.php
+/ resources / views / users / campaigns.blade.php
+/ resources / views / users / donations.blade.php
+/ resources / views / users / withdrawals.blade.php
+/ resources / views / users / withdrawals-configure.blade.php
+/ resources / views / users / navbar-edit.blade.php
+
+
+
+/ resources / views / includes / list-campaings.blade.php
+/ resources / views / includes / navbar.blade.php
+/ resources / views / includes / embed.blade.php
+
+
+/ public / css / main.css // Line: 3071 approximately
+/ resources / lang / en / misc.php // Line: 308 approximately
+
+
+***** Files New *****
+
+/ resources / views / users / dashboard.blade.php
+/ resources / views / users / layout.blade.php
+
+
+
+Thanks!

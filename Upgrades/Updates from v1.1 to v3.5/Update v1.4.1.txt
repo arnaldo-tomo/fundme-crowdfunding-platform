@@ -1,0 +1,22 @@
+*********************************************************
+*                  Update v1.4.1                        *
+*********************************************************
+
+*** BUGS FIXED ***
+- Important bug payment processor's fees
+
+
+***** Files Affected *****
+
+/ resources / views / users / campaigns.blade.php
+
+
+***** File New *****
+
+/ config / commissions.php
+
+
+Note: Set fees according to his country
+
+
+Thanks!

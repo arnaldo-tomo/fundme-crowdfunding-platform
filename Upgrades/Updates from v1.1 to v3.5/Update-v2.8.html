@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Update Fundme Crowdfunding Platform v2.8</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg text-center">
+        <div class="container">
+          <div class="position-relative">
+            <h1 class="jumbotron-title">Fundme Crowdfunding Platform v2.8</h1>
+              <p class="lead">Updated:  07, March 2019</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Changelog</h2>
+
+          <ul class="list-cgl">
+
+            <li class="title-list">Fixed</li>
+
+            <li>Finished campaigns were still showing in Categories and searches</li>
+            <li>Missing string social login</li>
+            <li>Deleting withdrawals</li>
+            <li>Social Login</li>
+					</ul><!-- /.ul list-cgl -->
+
+
+          <div class="alert alert-warning" role="alert">
+        <i class="fas fa-exclamation-triangle"></i>
+        IMPORTANT: Login with account the admin and go this URL <strong>http://yousite.com/update/2.8</strong> It is important because it adds to the database fields needed for this version. NOTE: Enter the URL mentioned above after climbing the:
+<strong>/ app / Http / Controllers / UpgradeController.php</strong>
+      </div>
+
+          <h2 class="title2">Affected files</h2>
+
+          <ul class="list-cgl affected-files">
+
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Http / Controllers</code></li>
+
+            <li>AjaxController.php <code>Line:34 to 62,74,112,115</code></li>
+            <li>HomeController.php <code>Line:74,77,115</code></li>
+            <li>SocialAuthController.php</li>
+            <li>UpgradeAuthController.php</li>
+
+          <li class="title-list"><code><i class="fas fa-folder-open"></i> resources / views</code></li>
+
+              <ul>
+              <li class="title-list"><code><em>users</em></code></li>
+              <li>withdrawals.blade.php <code>Line:128</code></li>
+            </ul>
+
+					</ul><!-- /.ul list-cgl -->
+          <hr />
+
+          <div class="card-deck">
+
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="assets/images/sponzy-support-creators-content-script.png">
+              <div class="card-body">
+                <h5 class="card-title">Sponzy - Support Creators Content Script</h5>
+                <a href="https://miguelvasquez.net/product/8/sponzy-support-creators-content-script" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/images/shotbly.jpg">
+            <div class="card-body">
+              <h5 class="card-title">Shotbly Community Script</h5>
+              <a href="https://miguelvasquez.net/product/6/shotbly-community-script" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="assets/images/gostock.jpg">
+            <div class="card-body">
+              <h5 class="card-title">GoStock – Free Stock Photos Script</h5>
+              <a href="https://codecanyon.net/item/gostock-free-stock-photos-script/19407325" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+            </div>
+          </div>
+
+        </div><!-- card group -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+          <hr />
+
+          <div class="text-center">
+            <a href="https://www.paypal.me/MiguelVasquezSoto" target="_blank" class="btn btn-light btnPaypal"><img src="assets/images/paypal.png" width="16" height="16" /></i> Donate</a>
+            <small class="form-text text-muted">Any donation will be well received 😉</small>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

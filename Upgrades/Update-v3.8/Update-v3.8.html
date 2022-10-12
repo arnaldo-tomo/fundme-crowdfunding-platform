@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../Updates from v1.1 to v3.5/assets/images/favicon.png">
+
+    <title>Update Fundme Crowdfunding Platform v3.8</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../Updates from v1.1 to v3.5/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../Updates from v1.1 to v3.5/assets/css/styles.css" rel="stylesheet">
+    <link href="../Updates from v1.1 to v3.5/assets/css/prism.css" rel="stylesheet">
+    <link href="../Updates from v1.1 to v3.5/assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="../Updates from v1.1 to v3.5/assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg text-center">
+        <div class="container">
+          <div class="position-relative">
+            <h1 class="jumbotron-title">Fundme Crowdfunding Platform v3.8</h1>
+              <p class="lead">Updated:  03, May 2020</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Changelog</h2>
+
+          <ul class="list-cgl">
+
+            <li class="title-list">New</li>
+            <li>Template based Bootstrap 4</li>
+            <li>CKEditor user can upload photo on form create campaign</li>
+            <li>Slider on Homepage</li>
+            <li>Page Latest Campaigns</li>
+            <li>Page Popular Campaigns</li>
+            <li>Related Campaigns in page campaign details</li>
+            <li>Social share: Facebook Messenger, Telegram and Text Message</li>
+
+            <li class="title-list">Fixed</li>
+            <li>Decimal format with JPY currency in Stripe.</li>
+
+            <li class="title-list">Changed</li>
+            <li>Message successfully in Bank Transfer Donations</li>
+
+      		</ul><!-- /.ul list-cgl -->
+
+          <div class="alert alert-sm alert-danger" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>IMPORTANT:</strong>
+            You must update from <strong><em>version 3.7</em></strong>, if you upgrade from another version will throw an error.
+          </div>
+
+          <div class="alert alert-danger" role="alert">
+        <i class="fas fa-exclamation-triangle"></i>
+        IMPORTANT: Login with account the admin and go this URL <strong>http://yousite.com/update/3.8</strong> It is important because it adds to the database fields needed for this version. NOTE: Enter the URL mentioned above after climbing the:
+<strong>/ app / Http / Controllers / UpgradeController.php</strong>
+      </div>
+
+          <h2 class="title2">Affected files</h2>
+
+          <ul class="list-cgl affected-files">
+
+            <li class="title-list"><code><i class="fas fa-folder-open"></i> Folders</code></li>
+
+              <li>public / css / <span class="badge badge-danger">Upload full folder</span></li>
+              <li>public / js / <span class="badge badge-danger">Upload full folder</span></li>
+              <li>public / webfonts / <span class="badge badge-danger">Upload full folder</span></li>
+              <br>
+              <li>resources / views / <span class="badge badge-danger">Upload full folder</span></li>
+              <br>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> app </code></li>
+              <li>Helper.php</li>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Http / Controllers</code></li>
+              <li>AdminController.php</li>
+      				<li>AjaxController.php</li>
+      				<li>CampaignsController.php</li>
+      				<li>PayPalController.php</li>
+      				<li>StripeController.php</li>
+      				<li>BankTransferController.php</li>
+      				<li>HomeController.php</li>
+              <li>UpgradeController.php</li>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> app / Providers</code></li>
+              <li>AppServiceProvider.php</li>
+
+              <li class="title-list"><code><i class="fas fa-folder-open"></i> public / img </code></li>
+              <li>slider-1.jpg <span class="badge badge-danger">NEW</span></li>
+              <li>slider-2.jpg <span class="badge badge-danger">NEW</span></li>
+              <li>slider-3.jpg <span class="badge badge-danger">NEW</span></li>
+              <li>donor.jpg <span class="badge badge-danger">NEW</span></li>
+
+          <li class="title-list"><code><i class="fas fa-folder-open"></i> resources / lang / en</code></li>
+          <li>misc.php</li>
+          <li>slider.php <span class="badge badge-danger">NEW</span></li>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <li class="mt-3">Edit text string Sliders, open the file <code>resources / lang / en / slider.php</code></li>
+
+          <pre><code class="language-php">'slider_1_title' => 'Little help, for big cause!',
+'slider_1_subtitle' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+
+'slider_2_title' => 'Help people near your',
+'slider_2_subtitle' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id.',
+
+'slider_3_title' => 'Educating the future',
+'slider_3_subtitle' => 'With a small contribution you can help educate hundreds of children.',</code></pre>
+
+          <li class="mt-3">Edit images Sliders, go to <code><strong>https://yoursite.com/panel/admin/theme</strong></code></li>
+          <br>
+
+          <div class="alert alert-sm alert-warning" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>IMPORTANT:</strong>
+            Go to the <strong>storage / framework / views</strong> folder and delete all files, also clear your browser's cache otherwise the changes will not be seen.
+          </div>
+
+          <hr />
+
+          <div class="card-deck">
+
+            <div class="card" style="width: 18rem;">
+            <a href="https://codecanyon.net/item/paystack-payment-gateway-for-fundme/26499939" target="_blank">
+              <img class="card-img-top" src="../Updates from v1.1 to v3.5/assets/images/paystack-fundme.png">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Paystack Payment Gateway for Fundme</h5>
+                <a href="https://codecanyon.net/item/paystack-payment-gateway-for-fundme/26499939" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <a href="https://codecanyon.net/item/razorpay-payment-gateway-for-fundme/26416408" target="_blank">
+              <img class="card-img-top" src="../Updates from v1.1 to v3.5/assets/images/razorpay-fundme.png">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title">Razorpay Payment for Fundme</h5>
+                <a href="https://codecanyon.net/item/razorpay-payment-gateway-for-fundme/26416408" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 18rem;">
+              <a href="https://miguelvasquez.net/product/8/sponzy-support-creators-content-script" target="_blank">
+              <img class="card-img-top" src="../Updates from v1.1 to v3.5/assets/images/sponzy-support-creators-content-script.png">
+            </a>
+              <div class="card-body">
+                <h5 class="card-title">Sponzy - Support Creators Content Script</h5>
+                <a href="https://miguelvasquez.net/product/8/sponzy-support-creators-content-script" target="_blank" class="btn btn-sm btn-success"><i class="fas fa-shopping-cart"></i> Buy now</a>
+              </div>
+            </div>
+
+        </div><!-- card group -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../Updates from v1.1 to v3.5/assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="../Updates from v1.1 to v3.5/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../Updates from v1.1 to v3.5/assets/js/prism.js"></script>
+    <script type="text/javascript" src="../Updates from v1.1 to v3.5/assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="../Updates from v1.1 to v3.5/assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

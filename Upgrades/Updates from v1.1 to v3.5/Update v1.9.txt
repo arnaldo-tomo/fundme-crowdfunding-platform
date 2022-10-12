@@ -1,0 +1,47 @@
+*********************************************************
+*                  Update v1.9                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Categories Add thumbnail
+- User delete campaigns
+
+*** NEWS ****
+- Facebook Comments
+- Add Gravatar on user Donations
+
+
+***** Files Affected *****
+
+
+/ resources / views / app.blade.php
+
+
+/ app / Http /controllers / AdminController.php
+
+
+/ resources / views / campaigns / view.blade.php
+
+
+/ resources / views / admin / dashboard.blade.php
+/ resources / views / admin / campigns.blade.php
+
+/ resources / views / includes / listing-donations.blade.php
+
+
+/ public / css / main.css // Line: 3057 approximately
+
+
+***** Files News *****
+
+/ config / fb_app.php
+
+
+*********************************************************
+*                  IMPORTANT                            *
+*********************************************************
+Create your app Facebook on https://developers.facebook.com/
+
+
+
+Thanks!

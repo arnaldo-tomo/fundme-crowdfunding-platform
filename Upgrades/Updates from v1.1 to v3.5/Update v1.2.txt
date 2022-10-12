@@ -1,0 +1,52 @@
+Update v1.2
+
+*** BUGS FIXED ***
+- Username error en RegisterController
+
+*** NEWS ****
+- Add Categories on Nav bar
+- Add Stats on bottom index page
+- Add Page all Categories
+- Add Option upload image on Categories
+
+******************************************************
+***                   IMPORTANT                             ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/1.2
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+
+***** Files Affected *****
+
+/ app / Http /controllers / Auth / RegisterController.php Line: 76
+/ app / Http /controllers / UpgradeController.php
+
+
+/ resources / views / includes / navbar.blade.php
+/ resources / views / index / home.blade.php
+
+/ resources / views / admin / edit-categories.blade.php
+/ resources / views / admin / add-categories.blade.php
+
+/ routes / web.php
+
+/ resources / lang / en / misc.php
+
+
+***** News Files/Folder *****
+- New Folder in: /public/img-category/
+- New file in: /public/img-category/default.jpg
+- New file in: / resources / views / includes / categories-listing.blade.php
+
+
+
+Thanks!

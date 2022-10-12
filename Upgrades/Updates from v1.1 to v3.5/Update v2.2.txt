@@ -1,0 +1,93 @@
+*********************************************************
+*                  Update v2.2                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Removed the campaign delete button if you have a donation (Avoid fraud)
+- Redirecting auto approve campaign
+- Real percentage in donation page
+
+*** NEWS ****
+- Add Rewards
+- Add Bank Transfer
+- Add Days Left in Campaing Thumbnail
+- The admin can choose the methods of payment for donations
+- Now the donor can choose their payment method (PayPal, Stripe or Bank Transfer)
+
+*** IMPROVED ***
+- Embed button copy link
+- Modal contact organizer
+- Banner Cookie Use
+- Donations of campaigns was changed to tab along with story and updates
+
+******************************************************
+***                   IMPORTANT                   ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/2.2
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+******************************************************
+***                   Files Affected              ****
+******************************************************
+
+/ routes / web.php
+
+******* Models **********
+/ app / Models / Campaigns.php
+/ app / Models / Donations.php
+/ app / Models / Rewards.php [NEW]
+
+******* Controllers **********
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / CampaingsController.php
+/ app / Http /controllers / DonationsController.php
+/ app / Http /controllers / RewardsController.php [NEW]
+
+
+******* Views ************
+/ resources / views / app.blade.php
+
+/ resources / views / campaigns / view.blade.php
+/ resources / views / campaigns / rewards.blade.php [NEW]
+/ resources / views / campaigns / edit-rewards.blade.php [NEW]
+
+/ resources / views / users / donations.blade.php
+/ resources / views / users / donation-view.blade.php [NEW]
+/ resources / views / users / dashboard.blade.php
+
+/ resources / views / default / donate.blade.php
+
+/ resources / views / index / home.blade.php
+
+/ resources / views / admin / donations.blade.php
+/ resources / views / admin / dashboard.blade.php
+/ resources / views / admin / donation-view.blade.php
+/ resources / views / admin / payments-settings.blade.php
+
+
+/ resources / views / includes / list-campaings.blade.php
+/ resources / views / includes / listing-donations.blade.php
+
+******* Public ************
+/ public / css / main.css // Line: 3078 approximately and class .headerModal Line:2825
+/ public /plugins / datepicker / datepicker3.css
+/ public / js / functions.js
+
+
+/ resources / lang / en / misc.php // Line: 308 approximately
+
+*** IMPORTANT: Be sure to configure the commissions in /config/commissions.php of the payment gateways that will be used.
+
+
+Visit http://miguelvasquez.net
+
+Thanks!

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Fundme Crowdfunding Platform v2.4</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+
+      <div class="header-title">
+        <h1>Fundme Crowdfunding Platform v2.4</h1>
+        <p class="lead">Updated:  09, November 2018</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Changelog</h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">Fixed</li>
+
+						<li>Update rewards</li>
+						<li>Removed</li>
+						<li>Iframe height</li>
+
+            <li>Validate email in donation page</li>
+            <li>Removing campaigns</li>
+            <li>Campaign embed</li>
+            <li>Column comment nullable</li>
+            <li>Method not available <code>trowValidationException</code></li>
+
+            <li class="title-list">Added</li>
+
+            <li>Upgrade to <strong>Laravel 5.7</strong></li>
+						<li><code>MustVerifyEmail</code> and <code>ResetPassword</code> in User model</li>
+						<li>ResetPassword template</li>
+						<li>Delete donations pending (Bank Transfer)</li>
+            <li>Name, email of organizer and url campaign in email sent to user after donating</li>
+
+            <li class="title-list">Changed</li>
+
+						<li>Validation images dimensions</li>
+						<li>Description validation</li>
+					</ul><!-- /.ul list-cgl -->
+
+          <h2 class="title2">Affected files</h2>
+
+          <ul class="list-cgl affected-files">
+
+            <li class="title-list"><code>app / Models</code></li>
+
+						<li>User.php</li>
+
+            <pre data-line="6,8,32-35" class="line-numbers" data-start="1"><code class="language-php">&lt;?php
+  namespace App\Models;
+
+use Laravel\Cashier\Billable;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\ResetPassword as ResetPasswordNotification;
+
+class User extends Authenticatable
+{
+    use Notifiable, Billable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'password', 'email', 'avatar', 'status','role','token','confirmation_code','countries_id',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    public function sendPasswordResetNotification($token) {
+
+        $this->notify(new ResetPasswordNotification($token));
+    }
+
+	public function campaigns() {
+        return $this->hasMany('App\Models\Campaigns');
+    }
+
+	public function country() {
+        return $this->belongsTo('App\Models\Countries', 'countries_id')->first();
+    }
+
+}</code></pre>
+
+
+            <li class="title-list"><code>app / Http / Controllers</code></li>
+
+						<li>AdminController.php</li>
+
+            <pre class="line-numbers" data-start="586"><code class="language-php">//Delete campaign Reported
+$campaignReporteds = CampaignsReported::where('campaigns_id',$request->id)->get();
+
+if($campaignReporteds) {
+	foreach ($campaignReporteds as $campaignReported) {
+			$campaignReported->delete();
+	}//<-- foreach
+}// IF</code></pre>
+
+        <pre data-line="3" class="line-numbers" data-start="628"><code class="language-php">$rules = array('name' => 'required',
+          'slug'        => 'required|ascii_only|unique:categories',
+          'thumbnail'   => 'mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width=457,min_height=359',
+          );</code></pre>
+
+  <pre data-line="3" class="line-numbers" data-start="695"><code class="language-php">$rules = array('name' => 'required',
+    'slug'        => 'required|ascii_only|unique:categories',
+    'thumbnail'   => 'mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width=457,min_height=359',
+    );</code></pre>
+
+
+    <small class="form-text text-muted">
+    Add this code to the end of the <code>AdminController.php</code> file
+    </small>
+
+    <pre class="line-numbers" data-start="792"><code class="language-php">public function deleteDonation(Request $request){
+
+  	  $sql = Donations::findOrFail($request->id);
+
+        $sql->delete();
+
+        return redirect('panel/admin/donations');
+
+  	}//<--- End Method
+    </code></pre>
+
+
+				<li>CampaignsController.php</li>
+
+        <pre class="line-numbers" data-start="55"><code class="language-php">'photo' => 'required|mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width='.$dimensions[0].',min_height='.$dimensions[1].'|max:'.$this->settings->file_size_allowed.'',</code></pre>
+
+        <pre class="line-numbers" data-start="66"><code class="language-php">'photo' => 'mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width='.$dimensions[0].',min_height='.$dimensions[1].'|max:'.$this->settings->file_size_allowed.'',</code></pre>
+
+        <pre class="line-numbers" data-start="457"><code class="language-php">//Delete campaign Reported
+$campaignReporteds = CampaignsReported::where('campaigns_id',$this->request->id)->get();
+
+if($campaignReporteds) {
+foreach ($campaignReporteds as $campaignReported) {
+  $campaignReported->delete();
+}//<-- foreach
+}// IF</code></pre>
+
+<pre class="line-numbers" data-start="493"><code class="language-php">'photo' => 'mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width='.$dimensions[0].',min_height='.$dimensions[1].'|max:'.$this->settings->file_size_allowed.'',</code></pre>
+
+<pre class="line-numbers" data-start="587"><code class="language-php">'photo' => 'nullable|mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width='.$dimensions[0].',min_height='.$dimensions[1].'|max:'.$this->settings->file_size_allowed.'',</code></pre>
+
+						<li>DonationsController.php</li>
+
+<pre class="line-numbers" data-start="111"><code class="language-php">'email' => 'required|email|max:100',</code></pre>
+
+<pre class="line-numbers" data-start="114"><code class="language-php">'comment' => 'nullable|max:100',</code></pre>
+
+<pre data-line="8-10" class="line-numbers" data-start="118"><code class="language-php">if ($validator->fails()) {
+  return response()->json([
+      'success' => false,
+      'errors' => $validator->getMessageBag()->toArray(),
+  ]);
+}
+
+if($this->request->comment == ''){
+  $this->request->comment = '';
+}</code></pre>
+
+<pre class="line-numbers" data-start="378"><code class="language-php">protected function sendEmail($campaign)
+{
+  $sender       = $this->settings->email_no_reply;
+  $titleSite    = $this->settings->title;
+  $_emailUser   = $this->request->email;
+  $campaignID   = $campaign->id;
+  $campaignTitle = $campaign->title;
+  $organizerName = $campaign->user()->name;
+  $organizerEmail = $campaign->user()->email;
+  $fullNameUser = $this->request->fullname;
+  $paymentGateway = $this->request->payment_gateway;
+
+  Mail::send('emails.thanks-donor', array(
+        'data' => $campaignID,
+        'fullname' => $fullNameUser,
+        'title_site' => $titleSite,
+        'campaign_id' => $campaignID,
+        'organizer_name' => $organizerName,
+        'organizer_email' => $organizerEmail,
+        'payment_gateway' => $paymentGateway,
+      ),
+  function($message) use ( $sender, $fullNameUser, $titleSite, $_emailUser, $campaignTitle)
+    {
+        $message->from($sender, $titleSite)
+          ->to($_emailUser, $fullNameUser)
+        ->subject( trans('misc.thanks_donation').' - '.$campaignTitle.' || '.$titleSite );
+    });
+}</code></pre>
+
+
+            <li>PagesController.php</li>
+            <small class="form-text text-muted">
+            Replace this file completely <code>PagesController.php</code>
+            </small>
+
+            <li>RewardsController.php</li>
+            <pre class="line-numbers" data-start="128"><code class="language-php">if( $sql->donations() ) {
+  $countPledge = $sql->donations()->where('rewards_id',$sql->id)->count();
+} else {
+  $countPledge = null;
+}</code></pre>
+
+            <li>UserController.php</li>
+
+            <pre data-line="9-13" class="line-numbers" data-start="45"><code class="language-php">public function update_account(Request $request)
+{
+
+ $input = $request->all();
+ $id = Auth::user()->id;
+
+ $validator = $this->validator($input,$id);
+
+ if ($validator->fails()) {
+        return redirect()->back()
+                    ->withErrors($validator)
+                    ->withInput();
+    }</code></pre>
+
+
+    <pre data-line="12-16" class="line-numbers" data-start="77"><code class="language-php">public function update_password(Request $request)
+{
+
+ $input = $request->all();
+ $id = Auth::user()->id;
+
+   $validator = Validator::make($input, [
+	'old_password' => 'required|min:6',
+      'password'     => 'required|min:6',
+	]);
+
+	if ($validator->fails()) {
+         return redirect()->back()
+                     ->withErrors($validator)
+                     ->withInput();
+     }</code></pre>
+
+     <pre class="line-numbers" data-start="151"><code class="language-php">'photo' => 'required|mimes:jpg,gif,png,jpe,jpeg|dimensions:min_width=125,min_height=125|max:'.$settings->file_size_allowed.'',</code></pre>
+
+
+            <li class="title-list"><code>public / css</code></li>
+
+						<li>main.css</li>
+
+            <pre class="line-numbers" data-start="3055"><code class="language-css">.description iframe {
+ max-height: 500px !important;
+}</code></pre>
+
+            <li class="title-list"><code>resources / views</code></li>
+
+              <ul>
+                <li class="title-list"><code><em>admin</em></code></li>
+                <li>edit-campaign.blade.php</li>
+    						<li>donation-view.blade.php</li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>emails</em></code></li>
+                <li>password_reset.blade.php <span class="badge badge-danger">NEW</span></li>
+    						<li>thanks-donor.blade.php</li>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>includes</em></code></li>
+                <li>embed.blade.php</li>
+              </ul>
+
+              <li class="title-list"><code>routes</code></li>
+
+  						<li>web.php</li>
+              <pre class="line-numbers" data-start="320"><code class="language-php">Route::post('delete/donation','AdminController@deleteDonation');</code></pre>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> and do not forget to visit <a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></p>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

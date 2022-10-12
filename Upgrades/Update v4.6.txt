@@ -1,0 +1,21 @@
+*********************************************************
+*                  Update v4.6                          *
+*********************************************************
+
+Upload the Script folder to your server and copy the following folders and files.
+
+**** Folders:
+1. app
+2. public / css
+3. public /js
+4. public / webfonts
+5. resources
+6. routes
+7. vendor
+
+**** Files:
+composer.json
+composer.lock
+
+
+Thanks!

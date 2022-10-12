@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Guide upgrade to Laravel 5.7</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+
+      <div class="header-title">
+        <h1>Guide upgrade to Laravel 5.7</h1>
+        <p class="lead">Fundme Crowdfunding Platform</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Step by Step</h2>
+
+          <div class="alert alert-warning" role="alert">
+        <strong>IMPORTANT:</strong>  Before making this upgrade you must have updated your script to version 2.4
+          </div>
+
+          <div class="alert alert-info" role="alert">
+  If you are downloading for the first time you should not perform these steps.
+</div>
+
+<ul class="list-cgl">
+  <li class="title-list">Requirements:</li>
+<li>PHP &gt;= 7.1.3</li>
+<li>OpenSSL PHP Extension</li>
+<li>PDO PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+<li>XML PHP Extension</li>
+<li>Ctype PHP Extension</li>
+<li>JSON PHP Extension</li>
+</ul>
+
+          <ul class="list-cgl">
+            <li class="title-list">First steps</li>
+
+						<li>Upload the <code>ZIP</code> file to your server</li>
+						<li>Create a folder on your server and unzip the <code>ZIP</code> file inside</li>
+						<li>Do not delete the files that you will copy below because you will lose all the changes you have made.</li>
+            <li>Once the folder is created and the <code>ZIP</code> file is decompressed, we will proceed with the upgrade</li>
+            <li>You should only copy the files from your current site to the folders mentioned below.</li>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <h2 class="title2">Affected files</h2>
+
+          <div class="alert alert-warning" role="alert">
+        <strong>IMPORTANT:</strong>  If you have any questions to update or do not know how to do it, contact me before you start, once you have made the changes it can not be reversed. You must copy the files from your current site to the folder you created with the new version.
+          </div>
+
+          <ul class="list-cgl affected-files">
+
+          <li class="title-list"><code>/Root directory</code></li>
+
+          <li>.env</li>
+          <small class="form-text text-muted">
+        Copy the credentials of your database again, since the file has new variables in this version...
+          </small>
+
+          <li>.htaccess</li>
+          <small class="form-text text-muted">
+        If you have modified something add it again
+          </small>
+
+
+
+            <li class="title-list"><code>app</code></li>
+
+              <ul>
+                <li>Copy the <code>Models</code> folder of your current site</li>
+    						<li>Copy all the files inside <code>app/Http/Controllers/Auth</code> from your current site</li>
+                <li>Copy all the files inside <code>app/Http/Controllers</code> from your current site</li>
+              </ul>
+
+              <li class="title-list"><code><em>config</em></code></li>
+              <ul>
+                <li>Copy the file <code>mail.php</code></li>
+    						<li>Copy the file <code>commissions.php</code> and <code>fb_app.php</code></li>
+              </ul>
+
+              <li class="title-list"><code><em>public</em></code></li>
+              <ul>
+                <li>Copy all the folders</li>
+              </ul>
+
+              <li class="title-list"><code><em>resources</em></code></li>
+              <ul>
+                <li>Copy the folder <code>lang</code></li>
+                <li>Copy the folder <code>views</code></li>
+              </ul>
+
+              <li class="title-list"><code><em>routes</em></code></li>
+              <ul>
+                <li>Copy the file <code>web.php</code></li>
+              </ul>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <p>
+            Once all the folders and files have been copied, create a new folder called <code>script-old</code> there will move all the files of your current site as backup, after you move all the files, move all the files of the new folder where I copy the aforementioned files .
+            There should not be any problem.
+          </p>
+
+          <hr />
+
+          <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> and do not forget to visit <a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></p>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.</span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

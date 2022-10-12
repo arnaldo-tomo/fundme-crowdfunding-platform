@@ -1,0 +1,39 @@
+*********************************************************
+*                  Update v1.4                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Number/ Amount Goal / Limits
+
+*** NEWS ****
+- Add search function
+
+***** Files Affected *****
+
+/ routes / web.php
+
+
+/ app / Http /controllers / AjaxController.php
+
+
+/ resources / views / includes / navbar.blade.php
+
+/ resources / views / admin / edit-campaign.blade.php
+/ resources / views / admin / limits.blade.php
+
+
+/ resources / views / campaigns / create.blade.php
+/ resources / views / campaigns / edit.blade.php
+
+
+/ resources / views / default / donate.blade.php
+/ resources / views / default / search.blade.php
+
+/ resources / lang / en / misc.php
+
+/ public / css / main.css // From approximately line 2885
+/ public / js / functions.js
+
+
+
+Thanks!

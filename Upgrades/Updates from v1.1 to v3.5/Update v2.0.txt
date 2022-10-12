@@ -1,0 +1,64 @@
+*********************************************************
+*                  Update v2.0                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Deleting categories with image
+- Word wrap in description campaign
+- Tags HTML in description campaign (share social)
+- Removed link in pending campaigns
+
+*** NEWS ****
+- Allowed to send emails in active session
+- Cookies agree banner
+- Deadline for campaigns
+- Added new currencies
+
+******************************************************
+***                   IMPORTANT                   ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/2.0
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+
+***** Files Affected *****
+
+/ resources / views / app.blade.php
+
+
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / DonationsController.php
+/ app / Http /controllers / UpgradeController.php
+
+
+/ resources / views / campaigns / view.blade.php
+/ resources / views / campaigns / create.blade.php
+/ resources / views / users / campaigns.blade.php
+/ resources / views / default / donate.blade.php
+/ resources / views / admin / payments-settings.blade.php
+/ resources / views / admin / campaigns.blade.php
+
+/ resources / views / includes / javascript_general.blade.php
+/ resources / views / includes / navbar.blade.php
+
+
+/ public / css / main.css // Line: 3067 approximately
+/ resources / lang / en / misc.php // Line: 295 approximately
+
+
+***** Files New *****
+
+/ public / js / cookies.js
+
+
+
+Thanks!

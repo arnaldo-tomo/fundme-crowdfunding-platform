@@ -1,0 +1,42 @@
+*********************************************************
+*                  Update v1.3                          *
+*********************************************************
+
+*** Improved / BUGS FIXED ***
+- Missing use Mail in RegisterController
+- Bug in withdrawal
+- Bug Save Payments - Missing Fee field
+- Overflow Image in Description Campaign
+- Improved text editor description
+- Number/Amount Goal
+
+*** NEWS ****
+- Change Footer style
+- Show name user in Admin Dashboard
+
+
+***** Files Affected *****
+
+/ app/ helper.php
+
+/ app / Http /controllers / Auth / RegisterController.php
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / CampaignsController.php
+
+
+/ resources / views / includes / footer.blade.php
+
+/ resources / views / admin / edit-campaign.blade.php
+/ resources / views / admin / dashboard.blade.php
+
+/ resources / views / campaigns / create.blade.php
+/ resources / views / campaigns / edit.blade.php
+/ resources / views / campaigns / view.blade.php
+
+/ resources / views / default / donate.blade.php
+
+/ public / css / main.css
+
+
+
+Thanks!

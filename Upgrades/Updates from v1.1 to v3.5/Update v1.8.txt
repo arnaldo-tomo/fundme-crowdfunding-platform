@@ -1,0 +1,71 @@
+*********************************************************
+*                  Update v1.8                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Summation of commissions on page user campaigns
+- Fee Donation
+- Minimum amount corrected
+- User search in admin panel
+
+*** NEWS ****
+- Automatic Image Rotation
+- Report Campaign
+- Embed videos in campaigns
+
+******************************************************
+***                   IMPORTANT                   ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/1.8
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+
+***** Files Affected *****
+
+
+/ routes / web.php
+
+/ resources / views / default / donate.blade.php
+
+
+/ app / Http /controllers / AjaxController.php
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / CampaignsController.php
+/ app / Http /controllers / DonationsController.php
+/ app / Http /controllers / UpgradeController.php
+
+
+/ resources / views / campaigns / create.blade.php
+/ resources / views / campaigns / edit.blade.php
+/ resources / views / campaigns / view.blade.php
+
+/ resources / views / users / campaigns.blade.php
+
+/ resources / views / admin / edit-campaign.blade.php
+/ resources / views / admin / payment-settings.blade.php
+/ resources / views / admin / layout.blade.php
+
+
+/ resources / lang / en / misc.php // Line: 290 approximately
+
+/ public / css / main.css // Line: 3052 approximately
+
+
+***** Files News *****
+
+/ app / Models / CampaignsReported.php
+
+/ resources / views / admin / reported-campaign.blade.php
+
+
+
+Thanks!

@@ -1,0 +1,14 @@
+Update v1.1
+
+* NEWS
+- Add Wysiwyg editor
+- Add Login and Sign Up
+- Add Categories
+- Add Stripe Payment
+- Add Withdrawals
+
+***** IMPORTANT *****
+
+All files have been affected including the database, please install again to avoid problems.
+
+Thanks!

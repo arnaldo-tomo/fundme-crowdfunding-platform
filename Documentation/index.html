@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Documentation Fundme Crowdfunding Platform</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg">
+        <div class="container">
+          <div class="position-relative">
+            <p class="lead">Documentation</p>
+            <h1 class="jumbotron-title">Fundme Crowdfunding Platform</h1>
+              <p class="lead" id="tableContent">Created:  05, October 2016 by Miguel Vasquez</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="sticky-top">
+            <h5 class="font-weight-bold pt-2 border-0"><i class="far fa-list-alt"></i> Table of Contents</h5>
+
+            <ul class="list-unstyled list-menu pl-0">
+              <li><a href="#Setting" class="scroll-element"><i class="fas fa-angle-right"></i> Setting MySQL</a></li>
+              <li><a href="#Uploading" class="scroll-element"><i class="fas fa-angle-right"></i> Uploading Files</a></li>
+              <li><a href="#Installation" class="scroll-element"><i class="fas fa-angle-right"></i> Installation</a></li>
+              <li><a href="#Social" class="scroll-element"><i class="fas fa-angle-right"></i> Social Login</a></li>
+              <li><a href="#Customize" class="scroll-element"><i class="fas fa-angle-right"></i> Customize</a></li>
+              <li><a href="#Sources" class="scroll-element"><i class="fas fa-angle-right"></i> Sources and Credits</a></li>
+  					</ul><!-- /.ul list-cgl -->
+          </div>
+        </div>
+
+        <div class="col-md-9">
+
+          <p class="font-italic mb-4">
+      			<strong>Fundme Crowdfunding Platform</strong>
+      			It is a script for fundraising for various causes, the administrator can add volunteers who can create unlimited campaigns,
+            this script is finished create a community where different people to help those in need either your community or different places.
+      		</p>
+
+          <h2 class="title2">Features:</h2>
+          <ul class="list-cgl">
+              <li>Built with <strong>Laravel 8</strong></li>
+              <li>Implemented <strong></strong>GDPR</li>
+              <li>reCAPTCHA</li>
+              <li>Rewards</li>
+        			<li>Facebook Login</li>
+              <li>Bootstrap 4</li>
+        			<li>Font Awesome 5</li>
+        			<li>Send mail to Organizer</li>
+        			<li>Members can create unlimited campaigns</li>
+        			<li>Updates campaigns</li>
+        			<li>Option Delete Account</li>
+        			<li>Members can change their name, email and password</li>
+        			<li>Members manage their campaigns and see donations</li>
+        			<li>Upload Avatar</li>
+        			<li>Change password</li>
+        			<li>Integration with PayPal</li>
+              <li>Integration with Stripe (SCA implemented)</li>
+              <li>Bank Transfer (Manual)</li>
+        			<li>XSS: Protection from cross site scripting </li>
+        			<li>Secure Bcrypt password hashing</li>
+        			<li>SMTP Support</li>
+        			<li>Share social</li>
+        			<li>Multiple currencies</li>
+        			<li>Easy translation</li>
+        			<li>Ajax pagination in Campaigns, Donations and Updates</li>
+
+
+              <li class="title-list">Admin Features:</li>
+              <li>Template AdminLTE</li>
+              <li>Change the site name</li>
+      				<li>Change the site title welcome</li>
+      				<li>Statistics</li>
+      				<li>Set keywords for the site. (SEO)</li>
+      				<li>Add a description (SEO)</li>
+      				<li>Create/Edit pages e.g.: Help, Privacy, etc.</li>
+      				<li>Payments Settings.</li>
+      				<li>See Donations</li>
+      				<li>Set up social accounts</li>
+      				<li>Manage members.</li>
+      				<li>Add / Edit members.</li>
+      				<li>Manage campaigns.</li>
+      				<li>Add / Edit Campaigns.</li>
+
+					</ul><!-- /.ul list-cgl -->
+
+
+          <h2 class="title2">Requirements:</h2>
+          <ul class="list-cgl">
+          <li><strong>PHP 7.4.0 or Greater</strong></li>
+          <li><strong>MySQL 5.6</strong></li>
+          <li>Fileinfo PHP Extension</li>
+          <li>OpenSSL PHP Extension</li>
+          <li>PDO PHP Extension</li>
+          <li>Mbstring PHP Extension</li>
+          <li>Tokenizer PHP Extension</li>
+          <li>XML PHP Extension</li>
+          <li>Ctype PHP Extension</li>
+          <li>JSON PHP Extension</li>
+          <li>BCMath PHP Extension</li>
+          <li>cURL</li>
+          <li>GD Library or ImageMagick or Imagick.</li>
+          <li>allow_url_fopen (PHP.INI) is ON</li>
+          </ul><!-- /.ul list-cgl -->
+
+          <div class="alert alert-warning" role="alert">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong>IMPORTANT:</strong>
+            Make sure your server has <strong>PHP 7.4.0</strong> or higher and <strong>MySQL 5.6</strong> as a minimum
+          </div>
+
+          <h2 id="Setting" class="title2">Setting MySQL <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">1.) Create a database</li>
+            <img class="img-fluid" src="assets/images/db.jpg">
+
+            <li class="title-list">2.) Create a user for database</li>
+            <img class="img-fluid" src="assets/images/db-user.jpg">
+
+            <li class="title-list">3.) Import the Database </li>
+            <li class="mb-4">Log into your phpMyAdmin and import the <code>fundme.sql</code> file located in the folder <code>Mysql</code></li>
+            <img class="img-fluid" src="assets/images/db-import.jpg">
+
+          </ul><!-- /.ul list-cgl -->
+
+
+          <h2 id="Uploading" class="title2">Uploading Files <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li>Upload all files inside the folder <code>"Script"</code> to the <code>"public_html"</code> or <code>"www"</code> folder on your server. You can compress the files or use FTP.</li>
+            <img class="img-fluid" src="assets/images/upload-files.jpg">
+          </ul><!-- /.ul list-cgl -->
+
+          <h2 id="Installation" class="title2">Installation <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li class="mb-3">After you have uploaded all files, go to <code>https://yousite.com/installer/script</code></li>
+
+            <li class="mb-3">
+              This screen will appear, all the boxes must be green to proceed with the installation.
+            </li>
+             <a href="assets/images/install-1.png" target="_blank">
+               <img class="img-fluid" src="assets/images/install-1.png">
+             </a>
+
+             <li class="mb-3">
+               Next, you can put the credentials of your database, your App name, URL and an email.
+             </li>
+              <a href="assets/images/install-2.png" target="_blank">
+                <img class="img-fluid" src="assets/images/install-2.png">
+              </a>
+
+              <li class="mb-3">
+                If all goes well, a success notice will appear with the Admin credentials, remember to change immediately, click Go to Panel Admin.
+              </li>
+              <a href="assets/images/install-3.png" target="_blank">
+                <img class="img-fluid" src="assets/images/install-3.png">
+              </a>
+
+
+
+    <li class="title-list">Mail Set Up</li>
+
+    <li>Open the file <code>.env</code> located in root folder, with any text editor, e.g: NOTEPAD</li>
+
+    <pre class="line-numbers"><code class="language-markup">MAIL_MAILER=sendmail
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=no-reply@miguelvasquez.com</code></pre>
+
+<li>You can choose between <code>sendmail</code> and <code>smtp</code></li>
+
+
+
+    <div class="alert alert-sm alert-warning" role="alert">
+      <i class="fas fa-exclamation-triangle"></i>
+      <strong>IMPORTANT:</strong>
+      Place all data without spaces
+    </div>
+
+    <li class="title-list">reCAPTCHA</li>
+    <li>Open the file <code>.env</code> located in the root folder, with any text editor, e.g: NOTEPAD</li>
+    <pre class="line-numbers"><code class="language-markup">INVISIBLE_RECAPTCHA_SITEKEY=YOU_KEY
+INVISIBLE_RECAPTCHA_SECRETKEY=YOU_SCRETKEY</code></pre>
+
+    <li>Get your API keys here <a href="https://www.google.com/recaptcha/admin/create" target="_blank">https://www.google.com/recaptcha/admin/create</a></li>
+
+    <div class="alert alert-sm alert-warning" role="alert">
+      <i class="fas fa-exclamation-triangle"></i>
+      <strong>IMPORTANT:</strong>
+      choose <strong>reCAPTCHA v2</strong> and <strong>Invisible reCAPTCHA</strong>
+    </div>
+
+<li class="title-list">Set Timezone</li>
+<li>Open the file <code>.env</code> located in the root folder, with any text editor, e.g: NOTEPAD</li>
+
+<pre class="line-numbers"><code class="language-markup">TIMEZONE=UTC</code></pre>
+
+<li>
+  List of Supported Timezones <a href="http://php.net/manual/en/timezones.php" target="_blank">http://php.net/manual/en/timezones.php</a>
+</li>
+
+</ul><!-- /.ul list-cgl -->
+
+
+          <h2 id="Social" class="title2">Social Login <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li>Open the file <code>.env</code> located in the root folder, with any text editor, e.g: NOTEPAD</li>
+
+    <pre class="line-numbers"><code class="language-markup">FACEBOOK_CLIENT_ID=
+FACEBOOK_CLIENT_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=</code></pre>
+
+<div class="alert alert-sm alert-warning" role="alert">
+  <i class="fas fa-exclamation-triangle"></i>
+  <strong>IMPORTANT:</strong>
+  You should ensure that this is ON Facebook/Google login at <strong><em>http://site.com/panel/admin/settings</em></strong>
+</div>
+
+          </ul><!-- /.ul list-cgl -->
+
+          <h2 id="Customize" class="title2">Customize <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+                    <li class="title-list">Language files</li>
+                    <li class="font-italic">To change the script language go to: <strong>resources / lang / en /</strong> Edit the text strings of all the files in are in that folder.</li>
+                    <pre class="line-numbers" data-start="5"><code class="language-php">/*
+|--------------------------------------------------------------------------
+| Admin Language Lines
+|--------------------------------------------------------------------------
+|
+*/
+
+'admin'      => 'Panel Admin',
+'role_admin' => 'Admin',
+'dashboard'  => 'Dashboard',</code></pre>
+
+<div class="alert alert-sm alert-info" role="alert">
+  <i class="fas fa-info-circle"></i>
+  <strong>Note:</strong>
+  You should only edit the right string, i.e .: <strong>'role_admin' => 'Edit this...',</strong>
+</div>
+
+<li class="title-list">Edit text string Sliders, open the file <code>resources / lang / en / slider.php</code></li>
+
+<pre><code class="language-php">'slider_1_title' => 'Little help, for big cause!',
+'slider_1_subtitle' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+
+'slider_2_title' => 'Help people near your',
+'slider_2_subtitle' => 'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id.',
+
+'slider_3_title' => 'Educating the future',
+'slider_3_subtitle' => 'With a small contribution you can help educate hundreds of children.',</code></pre>
+
+<li class="mt-3">Edit images Sliders, go to <code>https://yoursite.com/panel/admin/theme</code></li>
+
+          </ul><!-- /.ul list-cgl -->
+
+          <h2 id="lang" class="title2">How to add a new language <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+          <li>Duplicate the folder <strong>resources / lang / en</strong></li>
+          <li>Rename to your language for example <strong>es</strong></li>
+          <li>Translate the strings</li>
+          <li>Duplicate the file <strong>public/ js / jqueryTimeago_en.js</strong> and rename ie: <strong>public/ js / jqueryTimeago_es.js </strong></li>
+          <li>Translate the strings the new file</li>
+          <li>Go panel admin <code><strong>https://yourwebsite.com/panel/admin/languages/create</strong></code> and add you new lenguage</li>
+
+          <h2 class="title2 mt-4">Translate Categories</h2>
+          <li>Create a file called <strong>categories.php</strong> in the folder of the language to be translated, for example <strong>resources / lang / es</strong></li>
+
+          <pre class="line-numbers" data-start="5"><code class="language-php">&lt;?php
+
+return array(
+
+	/*
+	|--------------------------------------------------------------------------
+	| Categories Language Lines
+	|--------------------------------------------------------------------------
+	|
+	*/
+	"Animals" => "Animales",
+	"Business" => "Negocios",
+	"Charity" => "Caridad",
+);</code></pre>
+
+          <li>The key identifier will be the Slug / URL of the category</li>
+
+          <h2 class="title2 mt-4">Translate Pages</h2>
+          <li>Just create a page by selecting the new language, remember that you must put the same Slug / URL</li>
+
+        <hr />
+
+          <h2 class="title2">Make sure these folders have 755 or 777 permissions <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+          <li>public / avatar</li>
+            <li>public / temp</li>
+        		<li>public / campaigns</li>
+        		<li>public / campaigns / large</li>
+        		<li>public / campaigns / small</li>
+        		<li>public / campaigns / updates</li>
+        		<li>public / avatar</li>
+        		<li>public / img-category</li>
+            <hr />
+
+          <h2 id="Sources" class="title2">Sources and Credits <a href="#tableContent" class="scroll-element" title="Go Top"><i class="fas fa-arrow-up"></i></a></h2>
+
+          <ul class="list-cgl">
+            <li>Laravel - http://laravel.com/</li>
+      			<li>jQuery - http://jquery.com/</li>
+      			<li>Bootstrap - http://getbootstrap.com/</li>
+      			<li>Font Awesome - http://fortawesome.github.io/Font-Awesome/</li>
+      			<li>jquery Form // malsup.com/jquery/form/‎</li>
+      			<li>jqueryTimeago.js // http://timeago.yarp.com/</li>
+      			<li>Readmore - http://jedfoster.com/Readmore.js/</li>
+      			<li>Images - unsplash - http://unsplash.com/ -- splitshire http://www.splitshire.com/</li>
+      			<li>Avatars - http://uifaces.com/</li>
+      			<li>Fonts - https://www.google.com/fonts</li>
+      			<li>http://www.tinymce.com/</li>
+            <li>https://ckeditor.com/</li>
+      			<li>http://morrisjs.github.io/morris.js/</li>
+          </ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>support@miguelvasquez.net</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+          <hr />
+
+          <div class="text-center">
+            <small class="form-text text-muted">Thank you for purchasing my script 😉</small>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+
+    <script type="text/javascript">
+
+    function scrollElement(element){
+    	var offset = $(element).offset().top;
+    	$('html, body').animate({scrollTop:offset}, 500);
+    };
+
+    $('.scroll-element').click(function(e) {
+      e.preventDefault();
+      $this = $(this);
+      $value = $this.attr('href');
+      scrollElement($value);
+    });
+    </script>
+
+  </body>
+</html>

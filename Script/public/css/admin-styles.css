@@ -1,0 +1,111 @@
+body a {
+  color :#3c8dbc;
+}
+body a:hover,
+body a:focus {
+  color :#72afd2;
+}
+body {
+  background-color: #fafbfe;
+}
+#sidebar-nav {
+    width:260px;
+}
+.scrollbar::-webkit-scrollbar {
+  width:9px;
+    height: 3px;
+    -webkit-transition: all 0.2s ease;
+  	        transition: all 0.2s ease;
+}
+.scrollbar::-webkit-scrollbar-track {
+    background-color: #2f3439;
+    border-radius: 6px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #5f5e5e;
+    border-radius: 6px;
+}
+.scrollbar {
+  scrollbar-color: #5f5e5e #2f3439;
+  scrollbar-width: thin;
+}
+@media (min-width: 992px) {
+.admin-container,
+.admin-footer {
+    margin-left: 260px !important;
+  }
+
+  .sidebar {
+    visibility: visible !important;
+    transform: none !important;
+  }
+}
+.list-sidebar > li {
+  width: 100%;
+}
+.list-sidebar a {
+  color: #8391a2;
+  border-radius: 0 !important;
+  font-size: 15px;
+  border-left: 3px solid transparent !important;
+  text-transform: inherit;
+}
+.list-sidebar a:hover,
+.list-sidebar a:focus {
+  color: #fbfbfb;
+}
+.list-sidebar > li > a:hover,
+.list-sidebar > li > a:focus,
+.list-sidebar > li > a:active,
+.list-sidebar > li > a.active {
+  color: #fbfbfb;
+  background-color: #1e282c!important;
+  border-left-color: #fff !important;
+}
+.fs-7 {
+    font-size: 0.70rem!important;
+}
+.shadow-custom {
+  -webkit-box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+  box-shadow: 0 0 35px 0 rgb(154 161 171 / 15%);
+}
+.icon--admin {
+  color: rgb(0 0 0 / 2%) !important;
+  transform: none !important;
+}
+
+.select2-container--bootstrap-5.select2-container--open
+.select2-selection,
+.select2-container--bootstrap-5.select2-container--focus .select2-selection {
+  box-shadow: none !important;
+}
+.alert-admin {
+  font-size:7px;
+  vertical-align: middle;
+  margin-right: 3px;
+  box-shadow: 0 0 5px 0px #ffc107;
+  border-radius: 100%;
+}
+.fileuploader-items-list {
+  margin-top: 10px !important;
+}
+.collapse li > a:hover,
+.collapse li > a:focus,
+.collapse li > a:active {
+  background-color: transparent !important;
+}
+.btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08) !important;
+}
+.btn-search-2 {
+    color: #c3c3c3;
+    background: none;
+    position: absolute;
+    left: 0;
+    outline: none;
+    border: none;
+    width: 50px;
+    text-align: center;
+    bottom: 15%;
+}

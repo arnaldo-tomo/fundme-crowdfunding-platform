@@ -1,0 +1,46 @@
+*********************************************************
+*                  Update v2.0.1                        *
+*********************************************************
+
+*** BUGS FIXED ***
+- Removed edit post when campaign ends
+- Important bug with XSS
+- End campaign in users section
+- Removed link in pending campaigns
+- Removed delete campaign if you have at least one donation
+
+*** NEWS ****
+- Added campaign days remaining
+- Added campaign deadline in admin panel
+- Update to Laravel 5.3.30
+
+
+***********************************************
+*                  Files Affected             *
+***********************************************
+
+/ routes / web.php
+
+
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / CampaignsController.php
+
+/ resources / views / campaigns / view.blade.php
+/ resources / views / users / campaigns.blade.php
+/ resources / views / admin / campaigns.blade.php
+
+
+/ resources / lang / en / misc.php // Line: 302 approximately
+
+
+********** Files Important ************
+
+/ composer.json
+/ composer.lock
+
+/ config / app.php
+
+**** IMPORTANT -->> Upload Folder vendor <---- 
+
+
+***** Thanks! *****

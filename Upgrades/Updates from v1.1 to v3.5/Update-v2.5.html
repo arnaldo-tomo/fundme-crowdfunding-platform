@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <title>Update Fundme Crowdfunding Platform v2.5</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/prism.css" rel="stylesheet">
+    <link href="assets/css/prism-line-highlight.css" rel="stylesheet">
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css' />
+
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron jb-bg text-center">
+        <div class="container">
+          <div class="position-relative">
+            <h1 class="jumbotron-title">Fundme Crowdfunding Platform v2.5</h1>
+              <p class="lead">Updated:  13, November 2018</p>
+          </div>
+        </div>
+      </div>
+
+<div class="container">
+
+
+      <div class="row">
+        <div class="col-md-12">
+
+          <h2 class="title2">Changelog</h2>
+
+          <ul class="list-cgl">
+            <li class="title-list">Fixed</li>
+
+						<li><span class="badge badge-danger">IMPORTANT</span> Empty strings null</li>
+
+            <li class="title-list">Added</li>
+
+            <li>Text <strong><em>Create Campaing</em></strong> in button menu</li>
+						<li>Campaings link dropdown menu user</li>
+						<li>Counter Facebook share in campaign</li>
+					</ul><!-- /.ul list-cgl -->
+
+          <h2 class="title2">Affected files</h2>
+
+          <ul class="list-cgl affected-files">
+
+            <li class="title-list"><code>app</code></li>
+            <li>Helper.php</li>
+
+            <li class="title-list"><code>app / Http</code></li>
+
+						<li>Kernel.php</li>
+
+<pre data-line="5" class="line-numbers" data-start="1"><code class="language-php">protected $middleware = [
+    \App\Http\Middleware\CheckForMaintenanceMode::class,
+    \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+    \App\Http\Middleware\TrimStrings::class,
+    //\Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+    \App\Http\Middleware\TrustProxies::class,
+];</code></pre>
+
+            <li class="title-list"><code>resources / views</code></li>
+
+              <ul>
+                <li class="title-list"><code><em>campaigns</em></code></li>
+    						<li>views.blade.php</li>
+
+                <pre class="line-numbers" data-start="125"><code class="language-markup">&lt;a class="btn btn-block btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('campaign',$response-&gt;id).'/'.str_slug($response-&gt;title) }}" target="_blank"&gt;&lt;i class="fa fa-facebook myicon-right"&gt;&lt;/i&gt; {{trans('misc.share')}} ({{ App\Helper::countFacebookShare(URL::current()) }})&lt;/a&gt;</code></pre>
+              </ul>
+
+              <ul>
+                <li class="title-list"><code><em>includes</em></code></li>
+                <li>navbar.blade.php</li>
+<pre data-line="7-11" class="line-numbers" data-start="94"><code class="language-markup">&lt;li&gt;
+&lt;a href="{{ url('dashboard') }}" class="text-overflow"&gt;
+  &lt;i class="icon icon-dashboard myicon-right"&gt;&lt;/i&gt; {{ trans('admin.dashboard') }}
+  &lt;/a&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;a href="{{ url('dashboard/campaigns') }}" class="text-overflow"&gt;
+&lt;i class="ion ion-speakerphone myicon-right"&gt;&lt;/i&gt; {{ trans('misc.campaigns') }}
+  &lt;/a&gt;
+&lt;/li&gt;</code></pre>
+
+<pre data-line="2" class="line-numbers" data-start="126"><code class="language-markup">&lt;li&gt;&lt;a class="log-in custom-rounded" href="{{url('create/campaign')}}" title="{{trans('misc.create_campaign')}}"&gt;
+ &lt;i class="glyphicon glyphicon-edit"&gt;&lt;/i&gt; &lt;strong&gt;{{trans('misc.create_campaign')}}&lt;/strong&gt;&lt;/a&gt;
+ &lt;/li&gt;</code></pre>
+
+              </ul>
+
+					</ul><!-- /.ul list-cgl -->
+
+          <hr />
+
+          <div class="text-center">
+            <p class="lead">Any problem or doubt send me an email to <strong>miguelvasquez991@gmail.com</strong> <br/>
+            Do not forget to visit <strong><a href="https://miguelvasquez.net/" target="_blank">miguelvasquez.net</a></strong></p>
+          </div>
+
+          <hr />
+
+          <div class="text-center">
+            <a href="https://www.paypal.me/MiguelVasquezSoto" target="_blank" class="btn btn-light btnPaypal"><img src="assets/images/paypal.png" width="16" height="16" /></i> Donate</a>
+            <small class="form-text text-muted">Any donation will be well received 😉</small>
+          </div>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    </main><!-- /.container -->
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">&copy; Miguel Vasquez - Web Design and Development All Rights Reserved.
+          <a href="https://www.facebook.com/MiguelVasquezWeb"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/MigueVasquezweb"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/miguelvasquezweb"><i class="fab fa-instagram"></i></a>
+        </span>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/prism-line-highlight.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.scrollTo.min.js"></script>
+  </body>
+</html>

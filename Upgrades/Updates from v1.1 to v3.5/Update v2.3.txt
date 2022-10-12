@@ -1,0 +1,36 @@
+*********************************************************
+*                  Update v2.3                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Word Break in rewards description
+- Campaign Card (There is no time anymore) missing
+- String Lang
+- Campaing Active in Dashboard user before finalized
+- Spelling error in lang
+
+*** CHANGED ***
+- Stripe label to Debit/Credit Card in Donations page 
+
+
+******************************************************
+***                   Files Affected              ****
+******************************************************
+
+******* Views ************
+/ resources / views / campaigns / view.blade.php
+
+/ resources / views / users / dashboard.blade.php
+
+/ resources / views / default / donate.blade.php
+
+/ resources / views / includes / list-campaings.blade.php
+
+/ resources / lang / en / misc.php // Line: 263, 320 and 347 approximately
+
+/ resources / lang / en / admin.php // Line: 144 approximately
+
+
+Visit http://miguelvasquez.net
+
+Thanks!

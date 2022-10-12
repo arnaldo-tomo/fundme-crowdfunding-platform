@@ -1,0 +1,61 @@
+*********************************************************
+*                  Update v1.9.1                        *
+*********************************************************
+
+*** BUGS FIXED ***
+- Hidden avatar for donations anonymous
+
+*** NEWS ****
+- Set lang Facebook Comments from file fb_app.php
+- Add Like on Campaigns
+
+******************************************************
+***                   IMPORTANT                   ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/1.9.1
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+
+***** Files Affected *****
+
+/ config / fb_app.php
+
+/ routes / web.php
+
+/ resources / views / app.blade.php
+
+/ app / Models / Campaigns.php
+
+/ app / Http /controllers / AjaxController.php
+/ app / Http /controllers / UserController.php
+/ app / Http /controllers / UpgradeController.php
+
+
+/ resources / views / campaigns / view.blade.php
+
+/ resources / views / includes / listing-donations.blade.php
+/ resources / views / includes / navbar.blade.php
+
+
+/ public / css / main.css // Line: 3061 approximately
+/ public / js / functions.js
+
+
+***** Files News *****
+
+/ app / Models / Like.php
+
+/ resources / views / users / likes.blade.php
+
+
+
+Thanks!

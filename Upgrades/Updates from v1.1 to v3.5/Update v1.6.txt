@@ -1,0 +1,60 @@
+*********************************************************
+*                  Update v1.6                          *
+*********************************************************
+
+*** BUGS FIXED ***
+- Bug with image editing category
+- Failed to verify user account with active session
+
+*** NEWS ****
+- Widget Embed
+- Auto Approve Campaigns
+
+******************************************************
+***                   IMPORTANT                   ****
+******************************************************
+
+Login with account the admin and go this URL
+
+http://YOUSITE.com/update/1.6
+
+**** It is important because it adds to the database fields needed for this version
+
+** NOTE: Enter the URL mentioned above after climbing the 
+
+/ app / Http /controllers / UpgradeController.php
+
+
+
+***** Files Affected *****
+
+/ resources / views / auth / register.blade.php
+
+/ app / Http /controllers / AdminController.php
+/ app / Http /controllers / HomeController.php
+/ app / Http /controllers / CampaignsController.php
+/ app / Http /controllers / UpgradeController.php
+
+/ resources / views / campaigns / view.blade.php
+
+/ resources / views / users / campaigns.blade.php
+
+/ resources / views / admin / edit-campaign.blade.php
+/ resources / views / admin / campaigns.blade.php
+/ resources / views / admin / settings.blade.php
+/ resources / views / admin / dashboard.blade.php
+
+
+/ routes / web.php
+
+/ resources / lang / en / misc.php // Line: 276 approximately
+
+/ public / css / main.css // Line: 3003 approximately
+
+
+***** New File *****
+- / resources / views / includes / embed.blade.php
+
+
+
+Thanks!
